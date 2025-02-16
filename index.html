@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./css/header-bar.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+   .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            width: 100vw;
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
+        .dropdown-menu {
+            width: 100vw;
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 15px;
+        }
+        .dropdown-item img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+        .dropdown-item .content {
+            display: flex;
+            flex-direction: column;
+        }
+        .dropdown-item .content h6 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .dropdown-item .content p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .navbar{
+
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="header-bar mx-auto">
+            <!-- Left: Social Icons -->
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+            
+            <!-- Middle: Slider -->
+            <div class="slider-container">
+                <div id="textSlider" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <p><b>Feb 6:</b> Soon we are integrating the PF Services modules</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p><b>Feb 6:</b> Announcements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right: Phone Number & Controls -->
+            <div class="control-wrapper">
+                <div class="phone-info">
+                    <i class="bi bi-telephone"></i>
+                    <span>+91-9603354001</span>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu w-100" aria-labelledby="servicesDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="https://via.placeholder.com/60" alt="Web Design">
+                                    <div class="content">
+                                        <h6>Web Design</h6>
+                                        <p>Modern and responsive web design services.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="https://via.placeholder.com/60" alt="SEO">
+                                    <div class="content">
+                                        <h6>SEO</h6>
+                                        <p>Optimize your website for search engines.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="https://via.placeholder.com/60" alt="Marketing">
+                                    <div class="content">
+                                        <h6>Marketing</h6>
+                                        <p>Effective digital marketing strategies.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</body>
+</html>
