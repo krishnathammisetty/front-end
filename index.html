@@ -12,7 +12,61 @@
     <link href="./css/nav.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .main-container {
+           
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .main-container::before {
+            content: "";
+            position: absolute;
+            height: 500px;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('./images/technology-wave-line.png') no-repeat center center/cover;
+            filter: grayscale(100%);
+            opacity: 0.2; /* ✅ Only the background image is 50% transparent */
+            
+            z-index: -1; /* Keeps it behind the content */
+        }
 
+        .content-wrapper {
+            max-width: 100%;
+            margin: 0px;
+        }
+
+        .text-section {
+            color: rgb(0, 0, 0);
+            font-size: 2rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            padding: 20px;
+            
+        }
+
+        .image-section img {
+            width: 100%;
+            padding: 0px;
+            max-width: 400px;
+            transform: rotateX(30deg) rotateZ(-20deg) scale(1.5);
+        }
+        #description{
+            padding-top: 30px;
+            padding-left: 30px;
+            font-size: 45px;
+            margin: 0px;
+        }
+        #typing-text{
+            padding-top: 10px;
+            padding-left: 30px;
+            font-size: 18px;
+        }
+    </style>
 
 </head>
 <body>
@@ -182,6 +236,40 @@
             </div>
         </div>
     </nav>
+
+    <div class="main-container">
+        <div class="container content-wrapper">
+            <div class="row">
+                <!-- Left Text Section -->
+                <div class="col-md-7 text-section">
+                    <p id="description">One Application for all your Customized Verifications</p>
+                    <span id="typing-text"></span>
+                </div>
+    
+                <!-- Right Image Section -->
+                <div class="col-md-5 text-center image-section">
+                    <img src="./images/india.png" alt="Tilted Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- ✅ Now use Typed.js after it's loaded -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new Typed("#typing-text", {
+                strings: ["Employee Verifiaction.", "Property Verificaton.","Individual Person Verification."],
+                typeSpeed: 80,
+                fadeOut: true, 
+                fadeOutDelay: 1000, 
+                loop: true
+            });
+        });
+    </script>
+
 
 </body>
 </html>
