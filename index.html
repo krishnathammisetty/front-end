@@ -3,59 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header with Slider</title>
+    <link rel="icon" type="image/png" href="./images/favicon.ico">
+
+    <title>ClearCheck.in</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="./css/header-bar.css" rel="stylesheet">
+    <link href="./css/nav.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-   .navbar-nav .dropdown:hover .dropdown-menu {
-            display: block;
-            margin-top: 0;
-            width: 100vw;
-            left: 0;
-            right: 0;
-            position: absolute;
-        }
-        .dropdown-menu {
-            width: 100vw;
-            left: 0;
-            right: 0;
-            position: absolute;
-        }
-        .dropdown-item {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            padding: 15px;
-        }
-        .dropdown-item img {
-            width: 60px;
-            height: 60px;
-            margin-right: 15px;
-        }
-        .dropdown-item .content {
-            display: flex;
-            flex-direction: column;
-        }
-        .dropdown-item .content h6 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .dropdown-item .content p {
-            margin: 0;
-            font-size: 14px;
-            color: #666;
-        }
-        .navbar{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
 
-            padding: 0px;
-        }
-    </style>
+
 </head>
 <body>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 announcements">
         <div class="header-bar mx-auto">
             <!-- Left: Social Icons -->
             <div class="social-icons">
@@ -88,14 +49,16 @@
         </div>
     </div>
    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="#">
+                <img src="./images/clear-trip-logo.png" alt="Logo" height="70">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto nav-primary-options">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -136,14 +99,24 @@
                             </li>
                         </ul>
                     </li>
+         
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-login me-2" href="#">
+                            <strong>Login&nbsp;&nbsp;</strong> <i class="fas fa-sign-in-alt"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-register" href="#">Register</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
 
 </body>
 </html>
